@@ -1,0 +1,38 @@
+@model WebScraperDemo.Models.Webscraper.Utils.Storage
+<h4></h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Sorter">
+            <div class="form-group">
+                @{
+                    if (Model.amazon=="on"){
+                        <label>Amazon</label><br />
+                    }
+                    if (Model.trendyol=="on"){
+                        <label>Trendyol</label><br />
+                    }
+                    if (Model.tapaz=="on"){
+                        <label>Tapaz</label><br />
+                    }
+                }
+                <br />
+                <br />
+                <label>SortingByPrice</label>
+                <input name="sortingbyprice" type="radio" /><br />
+                <label>SortingByRating</label>
+                <input name="sortingbyrating" type="radio" /><br />
+                <label>In Which Order</label><br />
+                <label>ascending</label>
+                <input name="ascending" type="radio" /><br />
+                <label>descending</label>
+                <input name="descending" type="radio" /><br />
+
+                
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

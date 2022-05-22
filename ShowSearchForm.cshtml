@@ -1,0 +1,30 @@
+﻿
+<h4></h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Search">
+            <div class="form-group">
+                <label>Amazon</label>
+                <input name="amazon" type="radio" />
+                <label for="SearchPhrase1" class="control-label"></label>
+                <input name="SearchPhrase1" class="form-control" placeholder="Enter item to search in Amazon" />
+                <label>Trendyol</label>
+                <input name="trendyol" type="radio" />
+                <label for="SearchPhrase2" class="control-label"></label>
+                <input name="SearchPhrase2" class="form-control" placeholder="Enter item to search in Trendyol" />
+                <label>Tapaz</label>
+                <input name="tapaz" type="radio" />
+                <label for="SearchPhrase3" class="control-label"></label>
+                <input name="SearchPhrase3" class="form-control" placeholder="Enter item to search in Tapaz" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,95 @@
+@model List<WebScraperDemo.Models.Webscraper.Utils.WebData>
+@{
+    ViewData["Title"] = "Index";
+    
+    
+}
+@using WebScraperDemo.Models.Webscraper.Utils;
+
+<h1>Index</h1>
+<link href="~/lib/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet" />
+<div class="container">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <h3>Search Items</h3>
+            </div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-responsive" border="10" cellspacing="0" cellpadding="8">
+                <thead>
+                        <tr>
+                            <th>
+                                Item Title
+                            </th>
+                            <th>
+                                Item Price
+                            </th>
+                            <th>
+                                Item Currency
+                            </th>
+                            <th>
+                                Item Date
+                            </th>
+                        </tr>
+                </thead>
+                <tbody>
+                    @{
+                      
+
+                        for (int i=0;i<Model.Count;i++){
+                            if (Model[i].WType == "AmazonData"){
+                                <tr>
+                                    <td>
+                                        @Model[i].title
+                                    </td>
+                                    <td>
+                                        @Model[i].price
+                                    </td>
+                                    <td>
+                                        @Model[i].Currency
+                                    </td>
+                                    
+                                </tr>
+                            }
+                            else if (Model[i].WType == "TrendyolData"){
+                                <tr>
+                                    <td>
+                                        @Model[i].title
+                                    </td>
+                                    <td>
+                                        @Model[i].price
+                                    </td>
+                                    <td>
+                                        @Model[i].Currency
+                                    </td>
+                                </tr>
+                            }
+                            else if (Model[i].WType == "TapAzData"){
+                                
+                                <tr>
+                                    <td>
+                                        @Model[i].title
+                                    </td>
+                                    <td>
+                                        @Model[i].price
+                                    </td>
+                                    <td>
+                                        @Model[i].Currency
+                                    </td>
+                                    <td>
+                                        @Model[i].date
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
